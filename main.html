@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT Store</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/right-nav-style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="nav-toggle" hidden>
+        <!-- 
+    Выдвижную панель размещаете ниже
+    флажка (checkbox), но не обязательно 
+    непосредственно после него, например
+    можно и в конце страницы
+    -->
+        <nav class="nav">
+            <!-- 
+    Метка с именем `id` чекбокса в `for` атрибуте
+    Символ Unicode 'TRIGRAM FOR HEAVEN' (U+2630)
+    Пустой атрибут `onclick` используем для исправления бага в iOS < 6.0
+    См: http://timpietrusky.com/advanced-checkbox-hack 
+    -->
+            <label for="nav-toggle" class="nav-toggle" onclick></label>
+            <!-- 
+    Здесь размещаете любую разметку,
+    если это меню, то скорее всего неупорядоченный список <ul>
+    -->
+            <h2 class="logo">
+                <a href="//dbmast.ru/"><img style="width: 140px; height: 45px;" src="img/logo.svg"></a>
+            </h2>
+            <ul>
+                <li><a href="#market">Маркет</a></li>
+                <li><a href="#best">Лучшие</a></li>
+                <li><a href="#FAQ">FAQ</a></li>
+            </ul>
+        </nav>
+    <header>
+        <nav>
+            <div>
+                <img class="logo" src="img/logo.svg">
+            </div>
+            <div class="searchInput">
+                <img class="searchLogo" src="img/search.svg">
+                <input class="search" type="search" placeholder="Поиск NFT">
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#market">Маркет</a></li>
+                    <li><a href="#best">Лучшие</a></li>
+                    <li><a href="#FAQ">FAQ</a></li>
+                    <button class="basket" onclick="visibleBasket('basket')">Корзина</button>
+                </ul>
+            </div>
+        </nav>
+        <script src="js/header.js"></script>
+    </header>
+    <script src="js/basket.js"></script>
+    <section class="basketSection">
+        <div id="sellCompliete" class="sellCompliete">
+            <h1>Запрос на покупку отправлен!</h1>
+        </div>
+        <div id="basket" class="basketWindow">
+            <img onclick="visibleBasket('basket')" class="exitImage" src="img/exit.png" />
+            <form id="formID">
+                <input placeholder="Введите ваше имя" id="name">
+                <input placeholder="Введите ваш Email">
+                <input placeholder="Введите номер вашего кошелька">
+            </form>
+            <div class="basketInputContainer">
+
+                <div class="resartnaDiv">
+                    <img src="img/image%201resartna.png">
+                    <div class="marka" onclick="visiblebasketElement('basketMarka')">
+                        <img id="basketMarka" src="img/marka.png" onclick="visiblebasketElement('basketMarka')">
+                    </div>
+                </div>
+                <script src="https://www.google.com/recaptcha/api.js"></script>
+                <script>
+                    function onSubmit(token) {
+                        document.getElementById("demo-form").submit();
+                    }
+                </script>
+                <button onclick="sellComplete()" class="basketByButton">Купить</button>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="firstDiv">
+            <script src="js/timer.js"></script>
+            <div class="leftContainerSectionOne">
+                <h1>
+                    Создавайте и продавайте свои</br> творения
+                </h1>
+                <p>
+                    Различные NFT, которые можно покупать и продовать. Мы продвигаем ваши шедевры.
+                </p>
+                <div class="firstButtonContainer">
+                    <a href='#market' onclick="smoothScroll('#market')"><button class="buttonExploreNow">Все
+                            NFT</button></a>
+                </div>
+                <div class="advantagesContainer">
+                    <div>
+                        <h1 id="valueNFT">0</h1>
+                        <p>NFT</p>
+                    </div>
+                    <div>
+                        <h1 id="valueDesigners">0</h1>
+                        <p>Дизайнеров</p>
+                    </div>
+                    <div>
+                        <h1 id="valueAuctions">0</h1>
+                        <p>Аукционов</p>
+                    </div>
+                </div>
+            </div>
+            <div class="rightContainer">
+                <img id="one" src="./img/Rectangle 15.jpg">
+                <img id="two" src="./img/Rectangle%2016.jpg">
+                <img id="three" src="./img/Rectangle%2021.jpg">
+                <img id="four" src="./img/Rectangle%2017.jpg">
+                <img id="five" src="./img/Rectangle%2019.jpg">
+                <img id="six" src="./img/Rectangle%2018.jpg">
+                <img id="seven" src="./img/Rectangle%2020.jpg">
+            </div>
+        </section>
+        <section class="logoContainer">
+            <a href="https://binance.com/"><img src="./img/Binance_logo.svg" /></a>
+            <a href="https://www.binance.com/ru/price/ethereum"><img src="./img/Ethereum%20logo.svg" /></a>
+            <a href="https://www.blockchain.com/ru/"><img src="./img/Logo_of_Blockchain.io%20logo.svg" /></a>
+        </section>
+        <section>
+            <div class="aboutUS">
+                <h1>О нас</h1>
+                <p>Почему именно мы?</br>
+                    Чем мы лучше других?</p>
+            </div>
+            <div class="info">
+                <img src="./img/Group%2018.jpg" />
+                <div>
+                    <h1>Сделай свой NFT популярным</h1>
+                    <p>NFT STORE - отличное место для поиска, продажи
+                        и сбора необычных NFT и предметов коллекционирования. Основанная в
+                        начале 2024 года, компания NFT STORE готова предложить
+                        вам NFT по доступным ценам. Вы можете загружать свои работы
+                        в мультимедийных формах, таких как изображения, видео или 3D-арт,
+                        добавлять заголовок, описание и настраивать свои NFT с помощью свойств,
+                        статистики и разблокируемого подключения.</p>
+                </div>
+            </div>
+        </section>
+        <div id="market" class="marketInfo">
+            <h1>Маркет</h1>
+            <p>Тут представлены лучшие NFT от лучших </br> продавцов</p>
+        </div>
+        <section class="sectionMarket">
+            <div class="allcard"></div>
+        </section>
+        <section class="designersCard">
+            <script src="js/subChek.js"></script>
+            <h1 id="best">Лучшие дизайнеры</h1>
+            <p>Наши лучшие создатели NFT.</br>
+                Подписывайся, чтобы не потерять.</p>
+            <div class="designers">
+                <div class="designer">
+                    <img src="img/creator1.jpg" class="designerBackgroundImg">
+                    <img src="img/creator1Icon.png" class="creatorIconOne">
+                    <h1 class="nameDesigner">Tom</h1>
+                    <p class="designerInfo">Это не белый, а #FFFFFF</p>
+                    <button id="subButtonOne" onclick="subStatusChance('subButtonOne')">+подписка</button>
+                </div>
+                <div class="designer">
+                    <img src="img/creator2.jpg" class="designerBackgroundImg">
+                    <img src="img/creator2Icon.png" class="creatorIconTwo">
+                    <h1 class="nameDesigner">Antonio</h1>
+                    <p class="designerInfo">Позеционирую себя как лучший современный дизайнер</p>
+                    <button id="subButtonTwo" onclick="subStatusChance('subButtonTwo')">+подписка</button>
+                </div>
+                <div class="designer">
+                    <img src="img/creator3.jpg" class="designerBackgroundImg">
+                    <img src="img/creator3Icon.png" class="creatorIconThree">
+                    <h1 class="nameDesigner"> Bruhich</h1>
+                    <p class="designerInfo">Искусство в прекрасном</p>
+                    <button id="subButtonThree" onclick="subStatusChance('subButtonThree')">+подписка</button>
+                </div>
+            </div>
+        </section>
+        <section class="qastionsSection">
+            <script src="js/qastion.js"></script>
+            <h1 id="FAQ">Часто задаваемые вопросы</h1>
+            <p>Возможно вы найдёте тут свой вопросы</p>
+            <div class="allQastionContainer">
+                <section class="qastionContainerLeft">
+                    <div class="qastionOne">
+                        <div onclick="visibleQuestion(this, 'qastionTextOne')">
+                            <button>Какую комиссию мы берём за наши услуги?</button>
+                            <button class="plus">+</button>
+                        </div>
+                        <p class="question-container" id="qastionTextOne" hidden>
+                            Наша комиссия составляет всего лишь 2%.
+                            Это в среднем, в 4 раза меньше, чем у других маркетплейсов,
+                            поэтому с нами очень выгодно сотрудничать.
+                        </p>
+                    </div>
+                    <div class="qastionTwo">
+                        <div onclick="visibleQuestion(this, 'qastionTextTwo')">
+                            <button>Как давно мы в этой сфере?</button>
+                            <button class="plus">+</button>
+                        </div>
+                        <p class="question-container" id="qastionTextTwo" hidden>
+                            Мы в этой сфере около 5 лет.
+                            У нас есть много конкурентов, но мы готовы предоставить лучшие
+                            условия для развития молодых интернет-дизайнеров.
+                        </p>
+                    </div>
+                    <div class="qastionThree">
+                        <div onclick="visibleQuestion(this, 'qastionTextThree')">
+                            <button>Как стать лучшим дизайнером?</button>
+                            <button class="plus">+</button>
+                        </div>
+                        <p class="question-container" id="qastionTextThree" hidden>
+                            Здесь играют важную роль ваши личные скиллы и опыт.
+                            Требуется много практики, чтобы завоевать симпатию и восторг ценителей NFT.
+                        </p>
+                    </div>
+
+                </section>
+                <section class="qastionContainerRight">
+                    <div class="qastionFour">
+                        <div onclick="visibleQuestion(this, 'qastionTextFour')">
+                            <button>Какие криптовалюты доступны на нашем сайте ?</button>
+                            <button class="plus">+</button>
+                        </div>
+                        <p class="question-container" id="qastionTextFour" hidden>
+                            На нашем сайте, можно приобрести NFT в таких криптовалютах, как ETH, BTC и SOL.
+                        </p>
+                    </div>
+                    <div class="qastionFive">
+                        <div onclick="visibleQuestion(this, 'qastionTextFive')">
+                            <button>Какие криптокошельки мы поддерживаем? </button>
+                            <button class="plus">+</button>
+                        </div>
+                        <p class="question-container" id="qastionTextFive" hidden>
+                            Мы используем только проверенные временем TrustWallet, MetaMask и Phantom.
+                        </p>
+                    </div>
+                    <div class="qastionSix">
+                        <div onclick="visibleQuestion(this, 'qastionTextSix')">
+                            <button>Что такое NFT?</button>
+                            <button class="plus">+</button>
+                        </div>
+                        <p class="question-container" id="qastionTextSix" hidden>
+                            NFT — это криптографический токен, размещенный в блокчейне,
+                            который может представлять какой-либо цифровой актив.
+                        </p>
+                    </div>
+
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="logoFooterContainer">
+            <img class="logoFooter" src="img/logo.svg">
+            <p>Лучший сайт для продажи NFT с</br> большим опытом на крипто-рынке.</p>
+        </div>
+        <div class="footerFirstList">
+            <ul>
+                <li>About</li>
+                <li>Product</li>
+                <li>Resource</li>
+                <li>Term & Condition</li>
+                <li>FAQ</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>Company</li>
+                <li>Our Team</li>
+                <li>Partner With Us</li>
+                <li>Privacy & Policy</li>
+                <li>Features</li>
+            </ul>
+        </div>
+        <div class="footerLastContainer">
+            <ul>
+                <li>Contact</li>
+                <li>+375256877849</li>
+                <li>NFTStore@gmail.com</li>
+            </ul>
+            <div class="imgContainerFooter">
+                <img src="img/youtube.png">
+                <img src="img/discord.png">
+                <img src="img/instagram.png">
+            </div>
+        </div>
+    </footer>
+    <script src="./js/parse.js"></script>
+</body>
+
+</html>

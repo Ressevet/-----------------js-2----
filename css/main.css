@@ -1,0 +1,1400 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('/font/Roboto/Roboto.ttf');
+    font-weight: Bold;
+    font-style: normal;
+}
+
+html,
+body {
+    height: max-content;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(90deg, rgba(56, 141, 152, 1), rgba(24, 30, 65, 1)) no-repeat;
+}
+
+p,
+h1,
+img:hover {
+    cursor: default;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 0.6)
+}
+
+/*корзина */
+
+
+form input {
+    width: 550px;
+    border: none;
+    font-family: Roboto, serif;
+    font-size: 25px;
+    border-bottom: 4px solid black;
+    color: #C4C4C4;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    margin-top: 107px;
+}
+
+.sellCompliete h1 {
+    color: #ffffff;
+    font-size: 24px;
+    font-family: Roboto, serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+.basketWindow {
+    display: none;
+    background-color: white;
+    position: fixed;
+    z-index: 1000;
+    width: 807px;
+    height: 700px;
+    flex-direction: column;
+    border-radius: 10px;
+    right: 27%;
+}
+
+.basketWindow img {
+    width: 35px;
+    height: 35px;
+    margin-top: 37px;
+    margin-left: 37px;
+    z-index: 3000;
+}
+
+.basketWindow img:hover {
+    opacity: 80%;
+    scale: 95%
+}
+
+.basketInputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.resartnaDiv {
+    background-color: rgba(207, 203, 203, 0.1);
+    width: 550px;
+    height: 110px;
+    box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.basketByButton {
+    width: 550px;
+    height: 70px;
+    background: linear-gradient(#B75CFF, #671AE4);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-family: Roboto, serif;
+    font-weight: bolder;
+}
+
+.basketByButton:hover {
+    color: rgba(255, 255, 255, 0.8);
+    scale: 102%;
+    cursor: pointer;
+}
+
+.basketByButton:active {
+    scale: 103%
+}
+
+.resartnaDiv img {
+    width: 80px;
+    height: 80px;
+    margin: 17px 25px 17px 17px;
+}
+
+.marka {
+    width: 80px;
+    height: 80px;
+    margin: 17px 25px 17px 17px;
+    border: none;
+    box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+#basketMarka {
+    margin: 0;
+    width: 79px;
+    height: 79px;
+    display: none;
+}
+
+#sellCompliete {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease;
+    background-color: rgb(47, 166, 47);
+    width: 807px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    right: 27%;
+    top: 3%;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 2000;
+}
+
+
+/* Шапка */
+
+ul {
+    display: flex;
+    list-style-type: none;
+    gap: 40px;
+    color: white;
+    align-items: center;
+    font-size: 20px;
+    word-spacing: 40px;
+    font-family: Roboto, serif;
+    font-weight: bold;
+}
+
+ul li:hover {
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.basket {
+    background: linear-gradient(#B75CFF, #671AE4);
+    color: white;
+    border-radius: 10px;
+    height: 50px;
+    width: 171px;
+    box-shadow: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Roboto, serif;
+}
+
+.basket:hover {
+    color: rgba(255, 255, 255, 0.8);
+    scale: 102%;
+    cursor: pointer;
+}
+
+.logo {
+    width: 133px;
+    height: 38px;
+    margin-right: 61px;
+}
+
+.searchInput {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 350px;
+    height: 50px;
+    gap: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+nav input::placeholder {
+    opacity: 50%;
+    font-size: 20px;
+    color: white;
+    font-family: Roboto, serif;
+    font-weight: 500;
+}
+
+nav input:hover {
+    cursor: pointer;
+}
+
+.searchLogo {
+    height: 20px;
+    margin-left: 10px;
+}
+
+.search {
+    width: 330px;
+    height: 30px;
+    font-size: 20px;
+    background-color: transparent;
+    text-shadow: none;
+    text-align: start;
+    cursor: text;
+    border: none;
+    color: white;
+    font-family: Roboto, serif;
+}
+
+/* Главный блок */
+.firstDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.rightContainer img:hover {
+    scale: 105%;
+}
+
+.logoContainer img:hover {
+    opacity: 80%;
+}
+
+.rightContainer {
+    display: grid;
+    grid-template-areas:
+        "one two three"
+        "one two three"
+        "one five three"
+        "four five three"
+        "four five three"
+        "four five three"
+        "four five three"
+        "four seven three"
+        "six seven three"
+        "six seven three"
+        "six seven three";
+    grid-template-rows: 1fr fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+    height: 517px;
+    width: 591px;
+}
+
+#one {
+    grid-area: one;
+}
+
+#two {
+    grid-area: two;
+}
+
+#three {
+    grid-area: three;
+    margin-top: 65px;
+}
+
+#four {
+    grid-area: four;
+}
+
+#five {
+    grid-area: five;
+}
+
+#six {
+    grid-area: six;
+}
+
+#seven {
+    grid-area: seven;
+}
+
+.rightContainer img {
+    border-radius: 12px;
+}
+
+
+.leftContainerSectionOne {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 495px;
+    height: 457px;
+}
+
+.leftContainerSectionOne h1 {
+    font-size: 50px;
+    color: white;
+    width: 400px;
+    height: 180px;
+    font-weight: bold;
+    text-align: start;
+    line-height: 120%;
+    font-family: Roboto, serif;
+    margin: 0;
+}
+
+.leftContainerSectionOne p {
+    font-size: 20px;
+    opacity: 50%;
+    width: 490px;
+    height: 72px;
+    font-family: Roboto, serif;
+    margin: 10px 0 30px 0;
+    line-height: 180%;
+    color: white;
+}
+
+.buttonExploreNow {
+    width: 420px;
+    height: 50px;
+    background: linear-gradient(#B75CFF, #671AE4);
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    font-family: Roboto, serif;
+}
+
+.buttonExploreNow:hover {
+    color: rgba(255, 255, 255, 0.8);
+    scale: 102%;
+    cursor: pointer;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: space-around;
+    margin: 150px;
+    align-items: center;
+}
+
+.advantagesContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 127px;
+    margin-top: 40px;
+    margin-right: 50px;
+}
+
+.firstButtonContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 50px
+}
+
+#valueNFT {
+    font-size: 30px;
+    color: white;
+    font-family: Roboto, serif;
+    font-weight: bold;
+    margin: 0;
+    height: 45px;
+    width: 72px;
+}
+
+#valueDesigners {
+    font-size: 30px;
+    color: white;
+    font-family: Roboto, serif;
+    font-weight: bold;
+    margin: 0;
+    height: 45px;
+    width: 75px;
+}
+
+#valueAuctions {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    height: 45px;
+    width: 75px;
+    font-family: Roboto, serif;
+}
+
+.advantagesContainer p {
+    font-size: 20px;
+    color: white;
+    opacity: 50%;
+    font-weight: 500;
+    font-family: Roboto, serif;
+    margin: 0;
+}
+
+.advantagesContainer div {
+    height: 75px;
+    width: 72px;
+}
+
+/* блок информация о нас */
+
+.aboutUS {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 150px;
+
+}
+
+.aboutUS h1 {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    height: 48px;
+    margin: 0;
+    font-family: Roboto, serif;
+}
+
+.aboutUS p {
+    font-size: 20px;
+    color: white;
+    opacity: 50%;
+    text-align: center;
+    height: 60px;
+    margin: 0;
+    font-family: Roboto, serif;
+    font-weight: 500;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.info img {
+    width: 480px;
+    height: 600px;
+    border-radius: 10px;
+}
+
+.info h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: Roboto, serif;
+}
+
+.info p {
+    font-size: 20px;
+    width: 588px;
+    color: white;
+    opacity: 50%;
+    font-weight: 500;
+    line-height: 180%;
+    font-family: Roboto, serif;
+}
+
+.info div {
+    margin-top: 88px;
+}
+
+
+
+/* Маркет */
+
+.product-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.25);
+    color: white;
+    max-width: 330px;
+    max-height: 595px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 26px;
+}
+
+.details-and-price {
+    display: flex;
+    justify-content: space-around;
+    max-width: 337px;
+    gap: 160px;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.product-price {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    justify-items: end;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.product-price h2 {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Roboto, serif;
+    margin: 0;
+}
+
+.product-price p {
+    font-size: 20px;
+    font-family: Roboto, serif;
+    margin: 0;
+}
+
+.product-details h2 {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Roboto, serif;
+    margin: 0;
+}
+
+.product-details p {
+    font-size: 20px;
+    font-family: Roboto, serif;
+    margin: 0;
+}
+
+.product-details {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    margin: 0;
+    gap: 10px;
+    margin-bottom: 23px;
+    margin-top: 20px
+}
+
+.addBasketButton {
+    width: 337px;
+    height: 50px;
+    background: linear-gradient(#B75CFF, #671AE4);
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    font-family: Roboto, serif;
+}
+
+.addBasketButton:hover {
+    color: rgba(255, 255, 255, 0.8);
+    scale: 102%;
+    cursor: pointer;
+}
+
+.addBasketButton:active {
+    scale: 103%;
+}
+
+.sectionMarket {
+    display: flex;
+    justify-content: center;
+}
+
+.allcard {
+    display: flex;
+    gap: 16px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    width: 1200px;
+    position: relative;
+}
+
+.product-card img {
+    width: 99%;
+    height: 60%;
+    border-radius: 10px;
+}
+
+.marketInfo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+}
+
+.marketInfo h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    font-family: Roboto, serif;
+}
+
+.marketInfo p {
+    color: white;
+    opacity: 50%;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin: 10px 0 0 0;
+    font-family: Roboto, serif;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 15px;
+    margin-top: 60px;
+}
+
+.buttonContainer button {
+    background: rgba(255, 255, 255, 0.1);
+    width: 288px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Roboto, serif;
+}
+
+
+/* дизайнеры */
+
+.designers div {
+    width: 389px;
+    height: 525px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.designers {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0 0 0;
+}
+
+#best {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin: 60px 0 0 0;
+    text-align: center;
+    font-family: Roboto, serif;
+}
+
+.designersCard p {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    opacity: 50%;
+    text-align: center;
+    margin: 10px 0 0 0;
+    font-family: Roboto, serif;
+}
+
+.designerBackgroundImg {
+    height: 261px;
+    width: 389px;
+    border-radius: 10px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.designers button {
+    position: absolute;
+    bottom: 42px;
+    height: 50px;
+    width: 337px;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    background: linear-gradient(#B75CFF, #671AE4);
+    border: none;
+    border-radius: 10px;
+    font-family: Roboto, serif;
+    margin: 0;
+}
+
+.designers button:hover {
+    color: rgba(255, 255, 255, 0.8);
+    scale: 102%;
+    cursor: pointer;
+}
+
+.designer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nameDesigner {
+    font-size: 40px;
+    font-weight: Bold;
+    margin: 0;
+    margin: 60px 0 0 0;
+    color: white;
+    font-family: Roboto, serif;
+}
+
+.designerInfo {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+    color: white;
+    opacity: 50%;
+    font-family: Roboto, serif;
+}
+
+.creatorIconOne {
+    height: 99px;
+    width: 99px;
+    position: absolute;
+    margin-top: 216px;
+}
+
+.creatorIconTwo {
+    height: 99px;
+    width: 99px;
+    position: absolute;
+    margin-top: 216px;
+}
+
+.creatorIconThree {
+    height: 99px;
+    width: 99px;
+    position: absolute;
+    margin-top: 216px;
+}
+
+/* Блок с вопросами */
+
+.qastionsSection h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 170px;
+    font-family: Roboto, serif;
+}
+
+.qastionsSection p {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    opacity: 50%;
+    margin: 10px 0 0 0;
+    text-align: center;
+    font-family: Roboto, serif;
+}
+
+.qastionsSection button:hover {
+    cursor: pointer;
+}
+
+
+.allQastionContainer button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Roboto;
+    color: rgba(255, 255, 255, 0.5);
+    height: 60px;
+}
+
+.qastionContainerLeft div {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.qastionContainerRight div {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+
+.qastionContainerLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 591px;
+    height: 250px;
+}
+
+.qastionContainerRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 591px;
+    height: 250px;
+}
+
+.allQastionContainer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 122px;
+}
+
+.qastionOne div,
+.qastionTwo div,
+.qastionThree div,
+.qastionFour div,
+.qastionFive div,
+.qastionSix div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.allQastionContainer p {
+    text-align: left;
+    font-family: Roboto, serif;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/*footer*/
+
+.logoFooter {
+    height: 30px;
+    width: 121px;
+}
+
+.logoFooterContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.logoFooterContainer p {
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Roboto, serif;
+    color: rgba(255, 255, 255, 0.5)
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+    list-style: none;
+    padding-left: 0;
+}
+
+footer ul li {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 15px;
+    font-weight: 300;
+    font-family: Roboto, serif;
+    word-spacing: normal;
+}
+
+footer ul li:first-child {
+    color: white;
+}
+
+footer ul li:first-child {
+    cursor: default;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 180px;
+}
+
+.imgContainerFooter {
+    display: flex;
+    gap: 40px
+}
+
+footer img {
+    width: 25px;
+    height: 25px;
+}
+
+footer img:hover {
+    cursor: pointer;
+}
+
+.footerLastContainer {
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+}
+
+
+@media screen and (max-width: 1024px) {
+    nav {
+        width: 1000px;
+    }
+
+    .searchInput {
+        gap: 5px;
+        width: 300px;
+    }
+
+    ul {
+        gap: 20px;
+    }
+
+    .logo {
+        margin-right: 30px;
+    }
+
+    .search {
+        width: 280px;
+    }
+
+    .rightContainer {
+        width: auto;
+        grid-gap: 10px;
+        height: auto;
+    }
+
+    #one {
+        width: 150px;
+        height: 100px;
+    }
+
+    #two {
+        width: 150px;
+    }
+
+    #three {
+        width: 150px;
+    }
+
+    #four {
+        width: 150px;
+        height: 140px;
+    }
+
+    #five {
+        width: 150px;
+        height: 140px;
+    }
+
+    #six {
+        width: 150px;
+    }
+
+    #seven {
+        width: 150px;
+    }
+
+    .leftContainerSectionOne {
+        width: 440px;
+    }
+
+    .advantagesContainer {
+        gap: 10px;
+    }
+
+    .logoContainer {
+        gap: 40px;
+    }
+
+    .info img {
+        width: 400px;
+
+    }
+
+    .info {
+        gap: 30px;
+    }
+
+    .info p {
+        width: 500px;
+    }
+
+    .aboutUS h1 {
+        font-size: 32px;
+    }
+
+    .sectionMarket {
+        margin-left: 45px;
+    }
+
+    .aboutUS p {
+        font-size: 20px;
+    }
+
+    .marketInfo h1 {
+        font-size: 32px;
+    }
+
+    .marketInfo p {
+        font-size: 20px;
+    }
+
+    .allcard {
+        width: 990px;
+    }
+
+    .product-card {
+        width: 250px;
+        height: 400px;
+    }
+
+    .product-card img {
+        width: 99%;
+        height: 60%;
+    }
+
+    .product-card button {
+        width: 99%;
+        font-size: 17px;
+    }
+
+    .product-card p {
+        font-size: 15px;
+    }
+
+    .product-card h2 {
+        font-size: 10px;
+    }
+
+    .designers div {
+        width: 302px;
+        height: 452px;
+    }
+
+    .designerBackgroundImg {
+        width: 302px;
+        height: 200px;
+    }
+
+    .designers div button {
+        width: 250px;
+    }
+
+    .qastionsSection {
+        width: 95%;
+        margin-left: 20px;
+    }
+
+    .allQastionContainer {
+        gap: 10px;
+    }
+
+    #FAQ {
+        font-size: 32px;
+    }
+
+    #best {
+        font-size: 32px;
+    }
+
+    .bestNFT h1 {
+        font-size: 32px;
+    }
+
+    .creatorIconOne {
+        width: 80px;
+        height: 80px;
+        margin-top: 160px;
+    }
+
+    .creatorIconTwo {
+        width: 80px;
+        height: 80px;
+        margin-top: 160px;
+    }
+
+    .creatorIconThree {
+        width: 80px;
+        height: 80px;
+        margin-top: 160px;
+    }
+
+    .nameDesigner {
+        font-size: 24px;
+        margin: 60px 0 0 0;
+    }
+
+    .designersCard p {
+        font-size: 18px;
+    }
+
+    .designers button {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        width: 744px;
+    }
+
+    .searchInput {
+        width: 200px;
+        height: 35px;
+    }
+
+    .search {
+        width: 150px;
+    }
+
+    .basket {
+        width: 130px;
+        font-size: 15px;
+        height: 35px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 20px;
+    }
+
+    .searchLogo {
+        height: 17px;
+    }
+
+    nav input::placeholder {
+        font-size: 15px;
+    }
+
+    ul {
+        font-size: 15px;
+    }
+
+    .rightContainer {
+        display: none;
+    }
+
+    .logoContainer img {
+        width: 200px;
+    }
+
+    .info {
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 134px;
+    }
+
+    .info img {
+        width: 500px;
+        height: 250px;
+    }
+
+    .info div {
+        width: 500px;
+    }
+
+    .product-card {
+        width: 170px;
+        height: 300px;
+    }
+
+    .product-card button {
+        font-size: 15px;
+        height: 50px;
+    }
+
+    .allcard {
+        gap: 13px;
+    }
+
+    .details-and-price {
+        gap: 50px;
+    }
+
+    .designers div {
+        width: 222px;
+        height: 352px;
+    }
+
+    .designerBackgroundImg {
+        width: 222px;
+        height: 180px;
+    }
+
+    .designers div button {
+        width: 190px;
+        height: 35px;
+        font-size: 15px;
+    }
+
+    .creatorIconOne {
+        width: 70px;
+        height: 70px;
+        margin-top: 145px;
+    }
+
+    .creatorIconTwo {
+        width: 70px;
+        height: 70px;
+        margin-top: 145px;
+    }
+
+    .creatorIconThree {
+        width: 70px;
+        height: 70px;
+        margin-top: 145px;
+    }
+
+    .nameDesigner {
+        font-size: 18px;
+        margin-top: 35px;
+
+    }
+
+    .designersCard p {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    header {
+        display: none;
+    }
+
+    .rightContainer {
+        display: none;
+    }
+
+    .leftContainerSectionOne {
+        width: 300px;
+        margin-left: 20px;
+    }
+
+    .leftContainerSectionOne h1 {
+        font-size: 20px;
+        width: 300px;
+        height: max-content;
+    }
+
+    .leftContainerSectionOne p {
+        font-size: 12px;
+        width: 300px;
+    }
+
+    .firstButtonContainer {
+        width: 150px;
+    }
+
+    .firstButtonContainer button {
+        width: 150px;
+        height: 30px;
+    }
+
+    .advantagesContainer {
+        font-size: 15px;
+        width: 300px;
+        gap: 5px;
+    }
+
+    .firstDiv {
+        width: 300px;
+    }
+
+    .logoContainer {
+        height: max-content;
+        margin: 0;
+        overflow: scroll;
+        justify-content: start;
+        width: 300px;
+        margin-left: 10px;
+    }
+
+    .aboutUS h1 {
+        font-size: 18px;
+    }
+
+    .aboutUS p {
+        font-size: 15px;
+    }
+
+    .info img {
+        display: none;
+    }
+
+    .info {
+        gap: 15px;
+
+    }
+
+    .info h1 {
+        font-size: 18px;
+        width: 300px;
+    }
+
+
+    .info p {
+        font-size: 14px;
+        width: 300px;
+    }
+
+    .info div {
+        margin: 0;
+        width: 300px;
+    }
+
+    .marketInfo h1 {
+        font-size: 18px;
+    }
+
+    .marketInfo p {
+        font-size: 14px;
+    }
+    
+    .designers {
+        overflow: scroll;
+        justify-content: start;
+        margin-left: 15px;
+    }
+
+    #best {
+        font-size: 18px;
+    }
+
+    .designersCard p {
+        font-size: 14px;
+    }
+
+    #FAQ {
+        font-size: 18px;
+    }
+
+    .qastionsSection p {
+        font-size: 14px;
+    }
+
+    .allQastionContainer {
+        flex-direction: column;
+    }
+
+    .allQastionContainer section {
+        width: 280px;
+    }
+
+    .allQastionContainer button {
+        font-size: 13px;
+    }
+
+    footer {
+        flex-direction: column;
+        margin-left: 70px;
+        margin-bottom: 30px;
+    }
+}
