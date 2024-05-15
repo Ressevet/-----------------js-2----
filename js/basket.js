@@ -31,18 +31,28 @@ let isVisible = false;
 function sellComplete() {
     let click = document.getElementById("sellCompliete");
     let form = document.getElementById("formID")
-    if (!isVisible) { 
-        click.style.display = "flex";
-        click.style.opacity = "1"; 
-        isVisible = true;
-        form.reset() 
-        setTimeout(function() {
-            click.style.opacity = "0"; 
-            isVisible = false;
-            
-        }, 2000);
-        setTimeout(() => {
-            click.style.display = "none"
-        }, 3000);
+    let input = document.getElementsByTagName("input")
+    if (!isVisible) {
+            click.style.display = "flex";
+            click.style.opacity = "1";
+            isVisible = true;
+            form.reset()
+            setTimeout(function () {
+                click.style.opacity = "0";
+                isVisible = false;
+
+            }, 2000);
+            setTimeout(() => {
+                click.style.display = "none"
+            }, 3000);
+    }
+
+    var recaptchaResponse = grecaptcha.getResponse();
+    if (recaptchaResponse.length == 0) {
+        return false; // Предотвратить отправку формы
+    } else {
+        // Продолжить с отправкой формы
+        document.getElementById("formID").submit();
     }
 }
+

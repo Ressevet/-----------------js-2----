@@ -1245,10 +1245,18 @@ footer img:hover {
         margin-top: 145px;
     }
 
+    .product-card button {
+        height: 5vh;
+    }  /* !!!!!!*/
+
     .creatorIconThree {
         width: 70px;
         height: 70px;
         margin-top: 145px;
+    }
+
+    .designers button {
+        margin-top: 50px;
     }
 
     .nameDesigner {
@@ -1259,7 +1267,147 @@ footer img:hover {
 
     .designersCard p {
         font-size: 14px;
+        margin-bottom: 45px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .leftContainerSectionOne h1 {
+        font-size: 28px;
+        height: 100px;
+        margin-left: 40px;
+    }
+
+    .leftContainerSectionOne p {
+        font-size: 18px;
+        width: 370px;
+        margin-left: 40px;
+    }
+
+    .buttonExploreNow {
+        width: 360px;
+        margin-left: 40px;
+        margin-top: 20px;
+    }
+
+    .advantagesContainer {
+        gap: 25px;
+        width: 370px;
+        margin-top: 50px;
+        margin-right: 0;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .advantagesContainer p{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+
+    .logoContainer {
+        overflow: scroll;
+        width: 360px;
+        margin: 40px 0 0 0;
+        justify-content: start;
+        padding-left: 10px;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .aboutUS h1 {
+        font-size: 32px;
+    }
+
+    .aboutUS p {
+        font-size: 18px;
+    }
+
+    .aboutUS {
+        margin-top: 60px;
+    }
+
+    .info img {
+        display: none;
+    }
+
+    .info h1 {
+        display: none;
+    }
+
+    .info div {
+        margin-top: 0;
+    }
+
+    .info p {
+        width: 370px;
+    }
+
+    .info {
+        align-items: center;
+    }
+
+    .marketInfo h1 {
+        font-size: 24px;
+    }
+
+    .marketInfo {
+        margin-top: 70px;
+    }
+
+    .marketInfo p  {
+        font-size: 20px;
+    }
+
+    .allQastionContainer {
+        flex-direction: column;
+        width: 370px;
+        margin-top: 40px;
+    }
+
+    .allQastionContainer button {
+        font-size: 20px;
+    }
+
+    .qastionContainerLeft {
+        width: 360px;
+    }
+
+    .qastionContainerRight {
+        width: 360px;
+    }
+
+    #FAQ {
+        font-size: 24px;
+    }
+
+    .qastionsSection p {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    #best {
+        font-size: 24px;
+    }
+
+    .designers {
+        overflow: scroll;
+        justify-content: start;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .product-card {
+        width: 222px;
+    }
+
+    footer {
+        flex-direction: column;
+        margin-left: 86px;
         margin-bottom: 30px;
+        margin-top: 80px;
     }
 }
 

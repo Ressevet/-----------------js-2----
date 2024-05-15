@@ -25,7 +25,7 @@
     -moz-transition: right 0.3s;
     transition: right 0.3s;
     /* определяем цвет фона панели */
-    background: #16a085;
+   
     /* поверх других элементов */
     z-index: 2000;
 }
@@ -56,6 +56,8 @@
     /* размер шрифта */
     font-size: 1.2em;
     line-height: 1;
+    border: 1px solid white;
+    border-radius: 350px;
     /* всегда поверх других элементов страницы */
     z-index: 2001;
     /* анимируем цвет текста при наведении */
@@ -104,6 +106,12 @@
     left: auto;
     right: 2px;
     top: 1em;
+    border: none;
+    
+}
+
+[id='nav-toggle']:checked ~ .nav {
+    background: #1f8ba4;
 }
 
 

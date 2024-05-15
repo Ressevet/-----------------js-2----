@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/right-nav-style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <style>
 
     </style>
@@ -15,24 +16,8 @@
 
 <body>
     <input type="checkbox" id="nav-toggle" hidden>
-        <!-- 
-    Выдвижную панель размещаете ниже
-    флажка (checkbox), но не обязательно 
-    непосредственно после него, например
-    можно и в конце страницы
-    -->
         <nav class="nav">
-            <!-- 
-    Метка с именем `id` чекбокса в `for` атрибуте
-    Символ Unicode 'TRIGRAM FOR HEAVEN' (U+2630)
-    Пустой атрибут `onclick` используем для исправления бага в iOS < 6.0
-    См: http://timpietrusky.com/advanced-checkbox-hack 
-    -->
             <label for="nav-toggle" class="nav-toggle" onclick></label>
-            <!-- 
-    Здесь размещаете любую разметку,
-    если это меню, то скорее всего неупорядоченный список <ul>
-    -->
             <h2 class="logo">
                 <a href="//dbmast.ru/"><img style="width: 140px; height: 45px;" src="img/logo.svg"></a>
             </h2>
@@ -73,25 +58,15 @@
                 <input placeholder="Введите ваше имя" id="name">
                 <input placeholder="Введите ваш Email">
                 <input placeholder="Введите номер вашего кошелька">
+                <!-- Виджет reCAPTCHA -->
+                <div class="g-recaptcha" data-sitekey="6Ld9QdwpAAAAALNipujAZuMKfQfLCilWzunoI5CL"></div>
             </form>
             <div class="basketInputContainer">
-
-                <div class="resartnaDiv">
-                    <img src="img/image%201resartna.png">
-                    <div class="marka" onclick="visiblebasketElement('basketMarka')">
-                        <img id="basketMarka" src="img/marka.png" onclick="visiblebasketElement('basketMarka')">
-                    </div>
-                </div>
-                <script src="https://www.google.com/recaptcha/api.js"></script>
-                <script>
-                    function onSubmit(token) {
-                        document.getElementById("demo-form").submit();
-                    }
-                </script>
                 <button onclick="sellComplete()" class="basketByButton">Купить</button>
             </div>
         </div>
     </section>
+    
 
     <main>
         <section class="firstDiv">
